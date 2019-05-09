@@ -6,10 +6,6 @@
 
 package SendEmail;
 
-/**
- *
- * @author Naveen
- */
 import java.util.*;
 import javax.mail.*;
 import javax.mail.internet.*;
