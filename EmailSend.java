@@ -15,10 +15,10 @@ public class EmailSend {
     public static void main(String args[]){
         try{
             String host ="smtp.gmail.com" ;
-            String user = "yt.weteachtech@gmail.com";
-            String pass = "Amanulla@1997";
-            String to = "winwithaman@gmail.com";
-            String from = "yt.weteachtech@gmail.com";
+            String user = "your email";
+            String pass = "your password";
+            String to = "sender email";
+            String from = "your email";
             String subject = "This is confirmation number for your expertprogramming account. Please insert this number to activate your account.";
             String messageText = "Your Is Test Email :";
             boolean sessionDebug = false;
