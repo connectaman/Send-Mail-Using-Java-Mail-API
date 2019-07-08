@@ -41,7 +41,8 @@ public class EmailSend {
             java.security.Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
             Session mailSession = Session.getDefaultInstance(props, null);
             mailSession.setDebug(sessionDebug);
-            Message msg = new MimeMessage(mailSession);
+             try {
+             Message msg = new MimeMessage(mailSession);
             msg.setFrom(new InternetAddress(from));
             InternetAddress[] address = {new InternetAddress(to)};
             msg.setRecipients(Message.RecipientType.TO, address);
@@ -52,5 +53,9 @@ public class EmailSend {
            transport.sendMessage(msg, msg.getAllRecipients());
            transport.close();
            System.out.println("message send successfully");   
+        } catch (AddressException ex) {
+            Logger.getLogger(Demo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
     }
 }
