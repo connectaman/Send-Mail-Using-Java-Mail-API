@@ -20,7 +20,7 @@ public class EmailSend {
 
     }
     
-    public static void SendMail(String toMail,String subjectMail,String msg)
+    public static void SendMail(String toMail,String subjectMail,String context)
     {
      String host ="smtp.gmail.com" ;
             String user = "your email";
@@ -28,7 +28,7 @@ public class EmailSend {
             String to = toMail;
             String from = "your email";
             String subject = subjectMail;
-            String messageText = msg;
+            String messageText = context;
             boolean sessionDebug = false;
 
             Properties props = System.getProperties();
