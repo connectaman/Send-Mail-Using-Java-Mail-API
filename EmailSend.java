@@ -53,8 +53,8 @@ public class EmailSend {
            transport.sendMessage(msg, msg.getAllRecipients());
            transport.close();
            System.out.println("message send successfully");   
-        } catch (AddressException ex) {
-            Logger.getLogger(Demo.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (MessagingException e) {
+            throw new RuntimeException(e); 
         }
             
     }
